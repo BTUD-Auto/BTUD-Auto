@@ -65,3 +65,1058 @@
 
   --nav-emblem-size: 36px; /* Medium (32–40px) */
 }
+/* ------------------------------------------------------ */
+/*  GLOBAL RESET & BASE                                    */
+/* ------------------------------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: var(--btud-obsidian);
+  color: var(--btud-offwhite);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling for premium feel */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------------------------------------------------------ */
+/*  ULTRA-WIDE CONTAINERS                                  */
+/* ------------------------------------------------------ */
+
+/* Full-width section wrapper */
+.section {
+  width: 100%;
+  padding: var(--space-xxl) 0;
+  background: transparent;
+}
+
+/* Centered content block inside each section */
+.section-content {
+  width: 100%;
+  max-width: var(--layout-content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Ultra-wide hero sections */
+.hero {
+  width: 100%;
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding: var(--space-xxl) var(--space-md);
+}
+
+/* ------------------------------------------------------ */
+/*  FLEX & GRID SYSTEM                                     */
+/* ------------------------------------------------------ */
+
+/* Flex row */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-lg);
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Flex column */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Responsive grid */
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+/* 2-column grid */
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 3-column grid */
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* 4-column grid */
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ------------------------------------------------------ */
+/*  RESPONSIVE BREAKPOINTS                                 */
+/* ------------------------------------------------------ */
+
+@media (max-width: 1200px) {
+  .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flex-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .section-content {
+    padding: 0 var(--space-sm);
+  }
+
+  .hero {
+    padding: var(--space-xl) var(--space-sm);
+  }
+}
+/* ------------------------------------------------------ */
+/*  FONT IMPORTS                                           */
+/* ------------------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+/* ------------------------------------------------------ */
+/*  TYPOGRAPHY SYSTEM                                      */
+/* ------------------------------------------------------ */
+
+/* HERO TITLES — Splash */
+.hero-title {
+  font-family: var(--font-hero);
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--btud-offwhite);
+  text-shadow: var(--btud-glow-purple);
+  margin-bottom: var(--space-lg);
+}
+
+/* SECTION HEADERS — Anybody */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--btud-offwhite);
+  margin-bottom: var(--space-md);
+}
+
+/* SUBHEADERS — Anybody */
+.subheader {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--btud-royal-violet);
+  margin-bottom: var(--space-sm);
+}
+
+/* BODY TEXT — Anybody */
+p, .body-text {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--btud-offwhite);
+  line-height: 1.65;
+}
+
+/* TECHNICAL TEXT — Rajdhani */
+.tech-text {
+  font-family: var(--font-tech);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--btud-diagnostic-blue);
+}
+
+/* SMALL LABELS — Rajdhani */
+.label {
+  font-family: var(--font-tech);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--btud-steel-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* NAVIGATION TEXT */
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--btud-offwhite);
+  transition: 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--btud-royal-violet);
+  text-shadow: var(--btud-glow-purple);
+}
+
+/* BUTTON TEXT */
+.btn {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ------------------------------------------------------ */
+/*  RESPONSIVE TYPOGRAPHY                                  */
+/* ------------------------------------------------------ */
+
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  p, .body-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .subheader {
+    font-size: 1.4rem;
+  }
+
+  .tech-text {
+    font-size: 1rem;
+  }
+}
+/* ------------------------------------------------------ */
+/*  NAV WRAPPER                                            */
+/* ------------------------------------------------------ */
+
+nav {
+  width: 100%;
+  background: var(--btud-gunmetal);
+  box-shadow: var(--btud-shadow-medium);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: var(--space-md) 0;
+}
+
+/* Mobile: static nav (not sticky) */
+@media (max-width: 700px) {
+  nav {
+    position: static;
+  }
+}
+
+/* ------------------------------------------------------ */
+/*  NAV INNER CONTAINER                                    */
+/* ------------------------------------------------------ */
+
+.nav-container {
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ------------------------------------------------------ */
+/*  BRAND + EMBLEM                                         */
+/* ------------------------------------------------------ */
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.nav-brand img {
+  height: var(--nav-emblem-size); /* 36px */
+  width: auto;
+  filter: drop-shadow(var(--btud-shadow-soft));
+}
+
+.nav-brand-text {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--btud-offwhite);
+  letter-spacing: 0.5px;
+}
+
+/* ------------------------------------------------------ */
+/*  NAV LINKS (DESKTOP)                                    */
+/* ------------------------------------------------------ */
+
+.nav-links {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--btud-offwhite);
+  transition: 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--btud-royal-violet);
+  text-shadow: var(--btud-glow-purple);
+}
+
+/* ------------------------------------------------------ */
+/*  MOBILE MENU BUTTON                                     */
+/* ------------------------------------------------------ */
+
+.menu-btn {
+  display: none;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--btud-offwhite);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------ */
+/*  MOBILE MENU                                            */
+/* ------------------------------------------------------ */
+
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    width: 100%;
+    background: var(--btud-charcoal);
+    padding: var(--space-md);
+    display: none;
+    flex-direction: column;
+    gap: var(--space-md);
+    box-shadow: var(--btud-shadow-medium);
+  }
+
+  .mobile-menu .nav-link {
+    font-size: 1.2rem;
+    padding: var(--space-sm) 0;
+  }
+
+  .mobile-menu.show {
+    display: flex;
+  }
+}
+/* ------------------------------------------------------ */
+/*  HERO SECTIONS                                          */
+/* ------------------------------------------------------ */
+
+.hero {
+  width: 100%;
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding: var(--space-xxl) var(--space-md);
+  background: var(--btud-charcoal);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  box-shadow: var(--btud-shadow-medium);
+}
+
+.hero-title {
+  margin-bottom: var(--space-md);
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--btud-steel-gray);
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* ------------------------------------------------------ */
+/*  PAGE SECTION WRAPPERS                                  */
+/* ------------------------------------------------------ */
+
+.section {
+  width: 100%;
+  padding: var(--space-xxl) 0;
+  background: var(--btud-obsidian);
+}
+
+.section-alt {
+  width: 100%;
+  padding: var(--space-xxl) 0;
+  background: var(--btud-gunmetal);
+}
+
+.section-content {
+  width: 100%;
+  max-width: var(--layout-content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* ------------------------------------------------------ */
+/*  SECTION HEADERS                                        */
+/* ------------------------------------------------------ */
+
+.section-header {
+  margin-bottom: var(--space-xl);
+  text-align: left;
+}
+
+.section-title {
+  margin-bottom: var(--space-sm);
+}
+
+.section-description {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--btud-steel-gray);
+  max-width: 900px;
+  line-height: 1.7;
+}
+
+/* ------------------------------------------------------ */
+/*  CONTENT BLOCKS                                         */
+/* ------------------------------------------------------ */
+
+.content-block {
+  background: var(--btud-gunmetal);
+  padding: var(--space-xl);
+  border-radius: 12px;
+  box-shadow: var(--btud-shadow-medium);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.content-block-light {
+  background: var(--btud-charcoal);
+  padding: var(--space-xl);
+  border-radius: 12px;
+  box-shadow: var(--btud-shadow-soft);
+}
+
+/* ------------------------------------------------------ */
+/*  DIVIDERS                                               */
+/* ------------------------------------------------------ */
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin: var(--space-xl) 0;
+}
+
+.divider-glow {
+  width: 100%;
+  height: 2px;
+  background: var(--btud-royal-violet);
+  box-shadow: var(--btud-glow-purple);
+  margin: var(--space-xl) 0;
+}
+
+/* ------------------------------------------------------ */
+/*  HIGHLIGHT STRIPS                                       */
+/* ------------------------------------------------------ */
+
+.highlight-strip {
+  width: 100%;
+  background: var(--btud-midnight-purple);
+  padding: var(--space-lg) 0;
+  text-align: center;
+  color: var(--btud-offwhite);
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  box-shadow: var(--btud-shadow-medium);
+}
+
+/* ------------------------------------------------------ */
+/*  RESPONSIVE RULES                                       */
+/* ------------------------------------------------------ */
+
+@media (max-width: 700px) {
+  .hero {
+    padding: var(--space-xl) var(--space-sm);
+  }
+
+  .section {
+    padding: var(--space-xl) 0;
+  }
+
+  .section-alt {
+    padding: var(--space-xl) 0;
+  }
+
+  .content-block,
+  .content-block-light {
+    padding: var(--space-lg);
+  }
+
+  .section-description {
+    font-size: 1.05rem;
+  }
+}
+/* ------------------------------------------------------ */
+/*  BASE CARD                                              */
+/* ------------------------------------------------------ */
+
+.card {
+  background: var(--btud-gunmetal);
+  border-radius: 14px;
+  padding: var(--space-xl);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: var(--btud-shadow-medium);
+  transition: 0.25s ease;
+}
+
+/* Hover glow */
+.card:hover {
+  border-color: var(--btud-royal-violet);
+  box-shadow: var(--btud-glow-purple);
+  transform: translateY(-4px);
+}
+
+/* ------------------------------------------------------ */
+/*  SERVICE CARD                                           */
+/* ------------------------------------------------------ */
+
+.service-card {
+  background: var(--btud-charcoal);
+  border-left: 4px solid var(--btud-royal-violet);
+  padding: var(--space-lg);
+  border-radius: 10px;
+  box-shadow: var(--btud-shadow-soft);
+}
+
+.service-card:hover {
+  border-left-color: var(--btud-diagnostic-blue);
+  box-shadow: var(--btud-glow-blue);
+}
+
+/* Service title */
+.service-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+/* Service description */
+.service-desc {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--btud-steel-gray);
+  line-height: 1.6;
+}
+
+/* ------------------------------------------------------ */
+/*  CREW CARD                                              */
+/* ------------------------------------------------------ */
+
+.crew-card {
+  background: var(--btud-gunmetal);
+  padding: var(--space-xl);
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: var(--btud-shadow-medium);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.crew-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--space-md);
+  box-shadow: var(--btud-shadow-soft);
+}
+
+.crew-name {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.crew-role {
+  font-family: var(--font-tech);
+  font-size: 1.1rem;
+  color: var(--btud-diagnostic-blue);
+  margin-bottom: var(--space-md);
+}
+
+/* ------------------------------------------------------ */
+/*  GALLERY CARD                                           */
+/* ------------------------------------------------------ */
+
+.gallery-card {
+  background: var(--btud-charcoal);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--btud-shadow-medium);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* ------------------------------------------------------ */
+/*  REVIEW CARD                                            */
+/* ------------------------------------------------------ */
+
+.review-card {
+  background: var(--btud-gunmetal);
+  padding: var(--space-xl);
+  border-radius: 14px;
+  box-shadow: var(--btud-shadow-medium);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.review-name {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.review-stars {
+  color: var(--btud-royal-violet);
+  margin-bottom: var(--space-md);
+}
+
+.review-text {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--btud-offwhite);
+  line-height: 1.7;
+}
+
+/* ------------------------------------------------------ */
+/*  RESPONSIVE RULES                                       */
+/* ------------------------------------------------------ */
+
+@media (max-width: 700px) {
+  .card,
+  .service-card,
+  .crew-card,
+  .review-card {
+    padding: var(--space-lg);
+  }
+
+  .gallery-card img {
+    height: 200px;
+  }
+}
+/* ------------------------------------------------------ */
+/*  BASE BUTTON                                            */
+/* ------------------------------------------------------ */
+
+.btn {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------ */
+/*  PRIMARY BUTTON — BURPLE GLOW                           */
+/* ------------------------------------------------------ */
+
+.btn-primary {
+  background: var(--btud-royal-violet);
+  color: var(--btud-offwhite);
+  box-shadow: var(--btud-glow-purple);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--btud-midnight-purple);
+  box-shadow: var(--btud-glow-purple);
+  transform: translateY(-3px);
+}
+
+/* ------------------------------------------------------ */
+/*  SECONDARY BUTTON — DIAGNOSTIC BLUE                     */
+/* ------------------------------------------------------ */
+
+.btn-secondary {
+  background: var(--btud-diagnostic-blue);
+  color: var(--btud-offwhite);
+  box-shadow: var(--btud-glow-blue);
+  border: none;
+}
+
+.btn-secondary:hover {
+  background: var(--btud-arc-blue);
+  box-shadow: var(--btud-glow-blue);
+  transform: translateY(-3px);
+}
+
+/* ------------------------------------------------------ */
+/*  OUTLINE BUTTON — METALLIC EDGE                         */
+/* ------------------------------------------------------ */
+
+.btn-outline {
+  background: transparent;
+  color: var(--btud-offwhite);
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow: var(--btud-shadow-soft);
+}
+
+.btn-outline:hover {
+  border-color: var(--btud-royal-violet);
+  color: var(--btud-royal-violet);
+  box-shadow: var(--btud-glow-purple);
+  transform: translateY(-3px);
+}
+
+/* ------------------------------------------------------ */
+/*  FULL-WIDTH BUTTON                                      */
+/* ------------------------------------------------------ */
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+}
+
+/* ------------------------------------------------------ */
+/*  SMALL BUTTON                                           */
+/* ------------------------------------------------------ */
+
+.btn-sm {
+  padding: var(--space-xs) var(--space-md);
+  font-size: 0.95rem;
+}
+
+/* ------------------------------------------------------ */
+/*  RESPONSIVE BUTTONS                                     */
+/* ------------------------------------------------------ */
+
+@media (max-width: 700px) {
+  .btn {
+    width: 100%;
+    padding: var(--space-md);
+    font-size: 1.15rem;
+  }
+}
+/* ------------------------------------------------------ */
+/*  FOOTER WRAPPER                                         */
+/* ------------------------------------------------------ */
+
+footer {
+  width: 100%;
+  background: var(--btud-gunmetal);
+  padding: var(--space-xxl) 0 var(--space-xl);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  box-shadow: var(--btud-shadow-medium);
+}
+
+/* Inner container */
+.footer-content {
+  max-width: var(--layout-content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+/* ------------------------------------------------------ */
+/*  FOOTER BRAND                                           */
+/* ------------------------------------------------------ */
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.footer-brand img {
+  height: 48px;
+  width: auto;
+  filter: drop-shadow(var(--btud-shadow-soft));
+}
+
+.footer-brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--btud-offwhite);
+}
+
+/* ------------------------------------------------------ */
+/*  FOOTER CONTACT                                         */
+/* ------------------------------------------------------ */
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer-contact-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.footer-contact-item {
+  font-family: var(--font-tech);
+  font-size: 1.05rem;
+  color: var(--btud-offwhite);
+  letter-spacing: 0.5px;
+}
+
+/* ------------------------------------------------------ */
+/*  FOOTER LINKS                                           */
+/* ------------------------------------------------------ */
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.footer-link {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--btud-steel-gray);
+  transition: 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--btud-royal-violet);
+  text-shadow: var(--btud-glow-purple);
+}
+
+/* ------------------------------------------------------ */
+/*  FOOTER BOTTOM BAR                                      */
+/* ------------------------------------------------------ */
+
+.footer-bottom {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  font-family: var(--font-tech);
+  font-size: 0.95rem;
+  color: var(--btud-steel-gray);
+  letter-spacing: 1px;
+}
+
+/* ------------------------------------------------------ */
+/*  RESPONSIVE FOOTER                                      */
+/* ------------------------------------------------------ */
+
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+}
+/* ------------------------------------------------------ */
+/*  GLOBAL MOBILE ADJUSTMENTS                              */
+/* ------------------------------------------------------ */
+
+@media (max-width: 900px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .section-content {
+    padding: 0 var(--space-sm);
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* ------------------------------------------------------ */
+/*  MOBILE HERO COMPRESSION                                */
+/* ------------------------------------------------------ */
+
+@media (max-width: 700px) {
+  .hero {
+    padding: var(--space-xl) var(--space-sm);
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+/* ------------------------------------------------------ */
+/*  GRID COLLAPSE RULES                                    */
+/* ------------------------------------------------------ */
+
+@media (max-width: 1200px) {
+  .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------ */
+/*  CARD RESPONSIVENESS                                    */
+/* ------------------------------------------------------ */
+
+@media (max-width: 700px) {
+  .card,
+  .service-card,
+  .crew-card,
+  .review-card {
+    padding: var(--space-lg);
+  }
+
+  .gallery-card img {
+    height: 200px;
+  }
+}
+
+/* ------------------------------------------------------ */
+/*  BUTTON RESPONSIVENESS                                  */
+/* ------------------------------------------------------ */
+
+@media (max-width: 700px) {
+  .btn {
+    width: 100%;
+    padding: var(--space-md);
+    font-size: 1.15rem;
+  }
+}
+
+/* ------------------------------------------------------ */
+/*  NAVIGATION RESPONSIVENESS                              */
+/* ------------------------------------------------------ */
+
+@media (max-width: 700px) {
+  nav {
+    position: static;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .mobile-menu.show {
+    display: flex;
+  }
+}
+
+/* ------------------------------------------------------ */
+/*  FOOTER RESPONSIVENESS                                  */
+/* ------------------------------------------------------ */
+
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+}
