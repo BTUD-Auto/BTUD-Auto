@@ -1,0 +1,116 @@
+<!-- ========================= -->
+<!-- HERO SECTION -->
+<!-- ========================= -->
+<section class="hero">
+  <h1 class="hero-title">Contact Us</h1>
+  <p class="hero-subtitle">
+    Mobile automotive diagnostics and repair — available across Augusta, GA and surrounding areas.  
+    Call, text, or message us to schedule service.
+  </p>
+</section>
+
+<!-- ========================= -->
+<!-- MAIN CONTACT BLOCK -->
+<!-- ========================= -->
+<section class="section">
+  <div class="section-content">
+
+    <div class="section-header">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-description">
+        We respond quickly — whether you need diagnostics, repair, or roadside troubleshooting.
+      </p>
+    </div>
+
+    <div class="content-block">
+
+      <h3 class="subheader">Primary Contact</h3>
+      <p class="tech-text">Steven “Toot” Williams — Owner & Lead Technician</p>
+
+      <p class="body-text" style="margin-top: var(--space-sm);">
+        Phone: <strong>706‑421‑2301</strong><br>
+        Email: <strong>Steven_BTUDauto@outlook.com</strong>
+      </p>
+
+      <div class="divider"></div>
+
+      <h3 class="subheader">Secondary Contact</h3>
+      <p class="tech-text">Ashton — Office & Operations Manager</p>
+
+      <p class="body-text" style="margin-top: var(--space-sm);">
+        Phone: <strong>706‑901‑7322</strong><br>
+        Email: <strong>Ashton_BTUDauto@outlook.com</strong>
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- SERVICE AREA -->
+<!-- ========================= -->
+<section class="section-alt">
+  <div class="section-content">
+
+    <div class="section-header">
+      <h2 class="section-title">Service Area</h2>
+      <p class="section-description">
+        BTUD provides mobile diagnostics and repair throughout:
+      </p>
+    </div>
+
+    <div class="grid grid-3">
+
+      <div class="card">
+        <h3 class="subheader">Augusta, GA</h3>
+        <p class="body-text">Full coverage across the city and surrounding neighborhoods.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="subheader">North Augusta, SC</h3>
+        <p class="body-text">Cross‑state mobile service available daily.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="subheader">Grovetown & Evans</h3>
+        <p class="body-text">Fast response times for residential and workplace calls.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- HOURS -->
+<!-- ========================= -->
+<section class="section">
+  <div class="section-content">
+
+    <div class="section-header">
+      <h2 class="section-title">Hours of Operation</h2>
+      <p class="section-description">
+        Flexible scheduling to fit your needs.
+      </p>
+    </div>
+
+    <div class="content-block">
+
+      <p class="body-text">
+        <strong>Monday – Saturday:</strong> 8:00 AM – 7:00 PM<br><br>
+        <strong>Sunday:</strong> Emergency service only<br><br>
+        <strong>Same‑day mobile service available</strong> depending on workload and location.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- CTA STRIP -->
+<!-- ========================= -->
+<section class="highlight-strip">
+  Ready to schedule service? Call or text: 706‑421‑2301
+</section>
